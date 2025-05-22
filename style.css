@@ -1,0 +1,77 @@
+main {
+  background-color: #eed7a1;
+  width: 500px;
+  height: 500px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#inner {
+  width: 80%;
+  height: 80%;
+  background-color: #f7efd2;
+  border-radius: 10px;
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  position: absolute;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: flex-start;
+}
+
+.buttons {
+  width: 25%;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-size: 95%;
+}
+
+#pomodoroBtn {
+  background-color: white;
+  font-weight: bold;
+  border: none;
+}
+
+#shortBtn {
+  background: none;
+  border: none;
+}
+
+#longBtn {
+  background: none;
+  border: none;
+}
+
+#timer {
+  font-size: 100px;
+  font-family: "Orbitron";
+  font-weight: bold;
+}
+
+#startBtn {
+  text-align: center;
+  height: 15%;
+  width: 50%;
+  background-color: white;
+  color: red;
+  font-size: 200%;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  color: F22A2A;
+}
