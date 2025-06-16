@@ -1,9 +1,15 @@
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 main {
-  background-color: #eed7a1;
   width: 500px;
   height: 500px;
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,16 +19,38 @@ main {
 #inner {
   width: 80%;
   height: 80%;
-  background-color: #f7efd2;
   border-radius: 10px;
   padding-top: 20px;
-
+  border-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-
   position: absolute;
+}
+/* Default */
+#outer.pomodoro {
+  background-color: #eed7a1;
+}
+
+#outer.short {
+  background-color: #50b8e7;
+}
+
+#outer.long {
+  background-color: #ff9b9b;
+}
+
+#inner.pomodoro {
+  background-color: #f7efd2;
+}
+
+#inner.short {
+  background-color: #bfebff;
+}
+
+#inner.long {
+  background-color: #fbc3b0;
 }
 
 .controls {
@@ -34,27 +62,19 @@ main {
 }
 
 .buttons {
+  background: none;
   width: 25%;
   height: 40px;
   border-radius: 5px;
   font-family: "Inter";
   font-size: 95%;
+  border: none;
 }
 
-#pomodoroBtn {
+.active-button {
   background-color: white;
+  border: none;
   font-weight: bold;
-  border: none;
-}
-
-#shortBtn {
-  background: none;
-  border: none;
-}
-
-#longBtn {
-  background: none;
-  border: none;
 }
 
 #timer {
@@ -73,5 +93,5 @@ main {
   font-weight: bold;
   border-radius: 10px;
   border: none;
-  color: F22A2A;
+  color: #f22a2a;
 }
