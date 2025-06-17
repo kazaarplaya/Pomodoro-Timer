@@ -72,12 +72,14 @@ main {
 }
 
 .active-button {
+  transition: 1s ease;
   background-color: white;
   border: none;
   font-weight: bold;
 }
 
 #timer {
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
   font-size: 100px;
   font-family: "Orbitron";
   font-weight: bold;
@@ -94,4 +96,10 @@ main {
   border-radius: 10px;
   border: none;
   color: #f22a2a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#startBtn.pressed {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

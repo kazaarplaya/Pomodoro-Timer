@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+const path = require("path");
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -6,6 +7,7 @@ const createWindow = () => {
     height: 500,
     useContentSize: true, // Width and height refer to web page's size and excludes the window frame
     resizable: false, // Can't resize the window
+    icon: path.join(__dirname, "src", "assets", "icon.png"),
     webPreferences: {
       contextIsolation: true,
     },
