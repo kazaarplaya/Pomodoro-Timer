@@ -1,10 +1,11 @@
 {
-  "name": "Projects",
+  "name": "projects",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,32 @@
     "url": "https://github.com/kazaarplaya/Projects/issues"
   },
   "homepage": "https://github.com/kazaarplaya/Projects#readme",
-  "description": ""
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "electron": "^25.3.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.hans.pomodoro",
+    "productName": "Pomodoro-Timer",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "./src/assets/icon.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "icon": "./src/assets/icon.icns",
+      "target": [
+        "dmg"
+      ]
+    }
+  }
 }
