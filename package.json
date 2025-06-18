@@ -20,7 +20,7 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "electron": "^25.3.1",
+    "electron": "^25.9.8",
     "electron-builder": "^26.0.12"
   },
   "build": {
