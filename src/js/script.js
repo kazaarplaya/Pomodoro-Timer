@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let timer = document.getElementById("timer");
   const modebuttons = document.querySelectorAll(".buttons");
   const buttonclick = new Audio("./assets/buttonclick.mp3");
+  const alarm = new Audio("./assets/timeralarm.mp3");
+  const resetImage = document.getElementById("reset");
+  const resetButton = document.getElementById("resetBtn");
   buttonclick.volume = 0.1;
 
   const modes = {
@@ -70,6 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
       timeLeft = modes[currentMode] * 60;
       timer.textContent = `${modes[currentMode]}:00`;
     });
+
+    resetButton.addEventListener("click", function () {
+      startBtn.classList.remove("pressed");
+      clearInterval(timerDuration);
+      startBtn.textContent = "START";
+      isRunning = false;
+
+      timeLeft = modes[currentMode] * 60;
+      timer.textContent = `${modes[currentMode]}:00`;
+    });
   });
 
   // Timer Functionality
@@ -79,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     timerDuration = setInterval(() => {
       if (timeLeft <= 0) {
         clearInterval(timerDuration);
+        alarm.play();
         return;
       }
 
