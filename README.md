@@ -2,6 +2,9 @@
 
 A desktop Pomodoro timer app built with Electron.js for focused work sessions and breaks.
 
+![Preview of App](/src/images/screenshot.png)
+
+
 ---
 
 ## Prerequisites
