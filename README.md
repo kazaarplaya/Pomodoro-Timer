@@ -40,9 +40,3 @@ This will launch the Pomodoro Timer desktop app.
 
 - Electron.js  
 - HTML, CSS, JavaScript  
-
----
-
-## License
-
-[MIT](LICENSE)
